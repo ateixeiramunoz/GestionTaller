@@ -4,7 +4,7 @@
 
 ### Introducción
 
-El proyecto tiene como objetivo proporcionar una aplicación de gestión de taller.
+El proyecto tiene como objetivo proporcionar el diseño para una aplicación de gestión de taller.
 
 La aplicación deberá cumplir con los siguiente requisitos:
 
@@ -13,9 +13,9 @@ La aplicación deberá cumplir con los siguiente requisitos:
  - Tipos de Servicios
  - Coste de los servicios
  - Proveedores
- - Tipos de vehiculos
+ - Tipos de vehículos
  - Horario
- - VehiculosEnReparacion
+ - Vehículos En Reparación
  - Albaranes
  - Facturas
 
@@ -27,7 +27,7 @@ La aplicación deberá cumplir con los siguiente requisitos:
  - Empleado
  - Marca de Coche
  - Marca de Repuesto
- - Repuesto 
+ - Pieza
  - Vehículo
  - Proveedor
  - Albarán
@@ -38,9 +38,9 @@ La aplicación deberá cumplir con los siguiente requisitos:
 ## RELACIONES
 
  - Cliente posee Vehículo
- - Vehículo necesita repuesto
+ - Vehículo necesita pieza
  - Empleado atiende cliente
- - Proveedor provee repuesto
+ - Proveedor entrega/provee repuesto
  - Empleado repara vehículo
  - Cliente solicita servicio
  - Servicio genera factura
@@ -50,29 +50,31 @@ La aplicación deberá cumplir con los siguiente requisitos:
 
 ## ACCIONES / FUNCIONALIDADES
 
- - Atención al cliente / histórico de atención
- - Recepción de Repuestos
- - Reparación
- - Solicitud de Servicios
- - Facturación
- - La recepción de Repuestos genera un Albarán
-
+ - Atención al cliente / histórico de atención -> Ficha de cliente
+ - Recepción de Repuestos -> Albaran
+ - Reparación -> Piezas, Factura
+ - Solicitud de Servicios -> 
+ - Facturación -> Factura
+ 
 
 ## ENTIDADES CON CRUD
 
- - Clientes
+ - Clientes  -> 
  - Vehículos
  - Repuestos
  - Empleados
 
-
-## PRECARGA DE DATOS
+ 
+## PRECARGA DE DATOS  (Catálogo)
 
 - Modelos
 - Marcas
-- Repuestos
+- Piezas/Repuestos
 - Proveedores
 - Servicios (catálogo)
+
+
+
 
 
 
