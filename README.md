@@ -82,6 +82,8 @@ La aplicación deberá cumplir con los siguiente requisitos:
 
 
 
+
+
 ## EVOLUCIÓN DEL DISEÑO - 23/04/2024
 
  - No se considera necesario inventariar y/o convertir en entidades las Marcas y/o Modelos de coches/piezas. 
