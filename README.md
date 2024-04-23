@@ -62,6 +62,9 @@ La aplicación deberá cumplir con los siguiente requisitos:
 
 ## ENTIDADES CON CRUD
 
+Entidades que requieren operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en el sistema para gestionar su información. Cada una de estas entidades, como Cliente, Vehículo, Cita, Factura, TrabajoRealizado y Reparación, necesita estas operaciones para administrar eficazmente los datos relacionados con sus respectivos procesos en el taller. Por ejemplo, con CRUD para Cliente, los usuarios pueden agregar nuevos clientes, ver detalles de clientes existentes, actualizar la información de un cliente y eliminar clientes si es necesario. Este enfoque proporciona flexibilidad y control sobre la gestión de datos clave en el sistema.
+
+
 - Cliente: Necesita CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar la información de los clientes del taller, como agregar nuevos clientes, ver detalles de clientes existentes, actualizar la información de un cliente y eliminar clientes si es necesario.
 
 - Vehículo: Requiere CRUD para administrar la información de los vehículos que son atendidos en el taller. Esto incluye agregar nuevos vehículos, ver detalles de vehículos existentes, actualizar la información de un vehículo (por ejemplo, la fecha de la ITV), y eliminar vehículos de ser necesario.
@@ -76,12 +79,12 @@ La aplicación deberá cumplir con los siguiente requisitos:
 
 - Albarán: Si el taller maneja la recepción y gestión de pedidos de piezas o repuestos, entonces el albarán sería necesario para registrar la recepción de los productos, ver detalles de los albaranes existentes, actualizar información (como la cantidad recibida de piezas) y eliminar albaranes si es necesario.
 
-- Proveedor: Si el taller trabaja con proveedores para obtener piezas o repuestos, entonces la entidad proveedor necesitaría CRUD para agregar nuevos proveedores, ver detalles de proveedores existentes, actualizar información (como la dirección o el contacto) y eliminar proveedores si es necesario.
+- Empleado: Las operaciones CRUD son necesarias para gestionar la información de los empleados del taller, lo que incluye agregar nuevos empleados, ver detalles de empleados existentes, actualizar información de empleados (como la asignación de roles), y eliminar empleados si es necesario.
 
 
+## ENTIDADES SIN CRUD / PRECARGA DE DATOS
 
-
-## PRECARGA DE DATOS
+Entidades que no requieren operaciones CRUD, sino que implican la precarga de datos del catálogo. Esto significa que la información relacionada con estas entidades, como Piezas/Repuestos, Proveedores y Servicios (catálogo), se establece previamente en el sistema y no necesita ser modificada frecuentemente a través de operaciones CRUD. Por ejemplo, los detalles de las piezas y repuestos, así como la lista de proveedores y servicios ofrecidos por el taller, se configuran inicialmente y permanecen relativamente estáticos en comparación con los datos gestionados por las entidades con CRUD. Esta precarga de datos proporciona una base sólida y consistente para el funcionamiento del sistema desde el principio.
 
 Esta sección describe la precarga de datos del catálogo que se utiliza en el sistema. La precarga de datos es una parte fundamental de la configuración inicial del sistema y proporciona información básica necesaria para su funcionamiento. El catálogo incluye los siguientes elementos:
 
@@ -90,11 +93,15 @@ Esta sección describe la precarga de datos del catálogo que se utiliza en el s
 - Servicios (catálogo): Un conjunto de servicios ofrecidos por el taller, como reparaciones, mantenimiento y otros servicios especializados. Cada servicio está asociado con una descripción y un precio, que se utilizan para calcular los costos de las reparaciones y generar facturas para los clientes.
 
 
+# TAREAS PENDIENTES
 
+### PREPARACIÓN / ADECUACIÓN DEL ENTORNO
 
-### TAREAS PENDIENTES
+- Preparar precarga de datos
 
-#### PRIMARIAS
+### A DESARROLLAR 
+
+- Almacenes de información
 
 - Registro de Cliente
 - Registro de Vehículo de Cliente
@@ -103,9 +110,9 @@ Esta sección describe la precarga de datos del catálogo que se utiliza en el s
 - Recepción de material / Registro de albarán
 - Emisión de Factura
 
+
 #### SECUNDARIAS / SE PUEDEN HACER A MANO
 - Registro de Empleado
-
 
 
 # EVOLUCIÓN DEL DISEÑO 
