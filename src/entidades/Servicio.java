@@ -1,7 +1,8 @@
 package entidades;
 
 /**
- * Esta clase representa un servicio ofrecido en el catálogo de servicios. Contiene información sobre la descripción del servicio, su precio por unidad y su precio por hora.
+ * Esta clase representa un servicio ofrecido en el catálogo de servicios.
+ * Contiene información sobre la descripción del servicio, su precio por unidad y su precio por hora.
  */
 public class Servicio {
 

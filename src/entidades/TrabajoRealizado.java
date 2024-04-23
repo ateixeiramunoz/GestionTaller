@@ -3,7 +3,9 @@ package entidades;
 import java.time.LocalDateTime;
 
 /**
- * Esta clase representa un trabajo realizado en el taller. Contiene información sobre el servicio realizado, las fechas de inicio y fin, las fechas de garantía para revisión, montaje y pieza, y el empleado que realizó el trabajo.
+ * Esta clase representa un trabajo realizado en el taller. Contiene información sobre el servicio realizado,
+ * las fechas de inicio y fin, las fechas de garantía para revisión, montaje y pieza,
+ * y el empleado que realizó el trabajo.
  */
 public class TrabajoRealizado {
 
