@@ -23,16 +23,20 @@ La aplicación deberá cumplir con los siguiente requisitos:
 
 ## ENTIDADES  DETECTADAS
 
+ - Albarán
+ - Cita
  - Cliente
  - Empleado
- - Marca de Coche
- - Marca de Repuesto
- - Pieza
- - Vehículo
- - Proveedor
- - Albarán
  - Factura
+ - Instalación De Pieza
+ - ~~Marca de Coche~~
+ - ~~Marca de Repuesto~~
+ - Pieza
+ - Proveedor
+ - Reparación
  - Servicio
+ - Trabajo Realizado
+ - Vehículo
 
 
 ## RELACIONES
@@ -78,4 +82,10 @@ La aplicación deberá cumplir con los siguiente requisitos:
 
 
 
+## EVOLUCIÓN DEL DISEÑO - 23/04/2024
 
+ - No se considera necesario inventariar y/o convertir en entidades las Marcas y/o Modelos de coches/piezas. 
+Por ello se eliminan las entidades asociadas.
+ - Se incluyen las entidades de Cita, Instalación de Pieza, Trabajo Realizado y Reparación, todas ellas destinadas 
+a controlar las garantías asociadas a todos los trabajos y/o piezas incluidas en una misma factura.   
+ - Se incluye 
