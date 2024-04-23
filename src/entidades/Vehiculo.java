@@ -1,59 +1,58 @@
 package entidades;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 /**
- * The type Vehiculo.
+ * Esta clase representa un vehículo. Contiene información como la matrícula, número de bastidor, marca, modelo, color, fecha de fabricación y fecha de última ITV.
  */
 public class Vehiculo {
 
     /**
-     * The Matricula.
+     * La matrícula del vehículo.
      */
     String matricula;
     /**
-     * The Numero bastidor.
+     * El número de bastidor del vehículo.
      */
     String numeroBastidor;
     /**
-     * The Marca.
+     * La marca del vehículo.
      */
     String marca;
     /**
-     * The Modelo.
+     * El modelo del vehículo.
      */
     String modelo;
     /**
-     * The Color.
+     * El color del vehículo.
      */
     String color;
     /**
-     * The Fecha fabricacion.
+     * La fecha de fabricación del vehículo.
      */
     LocalDate fechaFabricacion;
     /**
-     * The Fecha itv.
+     * La fecha de última ITV del vehículo.
      */
     LocalDate fechaITV;
 
 
     /**
-     * Instantiates a new Vehiculo.
+     * Constructor por defecto de la clase Vehiculo.
      */
     public Vehiculo() {
     }
 
     /**
-     * Instantiates a new Vehiculo.
+     * Constructor de la clase Vehiculo.
      *
-     * @param matricula        the matricula
-     * @param numeroBastidor   the numero bastidor
-     * @param marca            the marca
-     * @param modelo           the modelo
-     * @param color            the color
-     * @param fechaFabricacion the fecha fabricacion
-     * @param fechaITV         the fecha itv
+     * @param matricula        La matrícula del vehículo.
+     * @param numeroBastidor   El número de bastidor del vehículo.
+     * @param marca            La marca del vehículo.
+     * @param modelo           El modelo del vehículo.
+     * @param color            El color del vehículo.
+     * @param fechaFabricacion La fecha de fabricación del vehículo.
+     * @param fechaITV         La fecha de última ITV del vehículo.
      */
     public Vehiculo(String matricula, String numeroBastidor, String marca, String modelo, String color, LocalDate fechaFabricacion, LocalDate fechaITV) {
         this.matricula = matricula;
@@ -66,126 +65,126 @@ public class Vehiculo {
     }
 
     /**
-     * Gets matricula.
+     * Obtiene la matrícula del vehículo.
      *
-     * @return the matricula
+     * @return La matrícula del vehículo.
      */
     public String getMatricula() {
         return matricula;
     }
 
     /**
-     * Sets matricula.
+     * Establece la matrícula del vehículo.
      *
-     * @param matricula the matricula
+     * @param matricula La matrícula del vehículo.
      */
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
     /**
-     * Gets numero bastidor.
+     * Obtiene el número de bastidor del vehículo.
      *
-     * @return the numero bastidor
+     * @return El número de bastidor del vehículo.
      */
     public String getNumeroBastidor() {
         return numeroBastidor;
     }
 
     /**
-     * Sets numero bastidor.
+     * Establece el número de bastidor del vehículo.
      *
-     * @param numeroBastidor the numero bastidor
+     * @param numeroBastidor El número de bastidor del vehículo.
      */
     public void setNumeroBastidor(String numeroBastidor) {
         this.numeroBastidor = numeroBastidor;
     }
 
     /**
-     * Gets marca.
+     * Obtiene la marca del vehículo.
      *
-     * @return the marca
+     * @return La marca del vehículo.
      */
     public String getMarca() {
         return marca;
     }
 
     /**
-     * Sets marca.
+     * Establece la marca del vehículo.
      *
-     * @param marca the marca
+     * @param marca La marca del vehículo.
      */
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
     /**
-     * Gets modelo.
+     * Obtiene el modelo del vehículo.
      *
-     * @return the modelo
+     * @return El modelo del vehículo.
      */
     public String getModelo() {
         return modelo;
     }
 
     /**
-     * Sets modelo.
+     * Establece el modelo del vehículo.
      *
-     * @param modelo the modelo
+     * @param modelo El modelo del vehículo.
      */
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
     /**
-     * Gets color.
+     * Obtiene el color del vehículo.
      *
-     * @return the color
+     * @return El color del vehículo.
      */
     public String getColor() {
         return color;
     }
 
     /**
-     * Sets color.
+     * Establece el color del vehículo.
      *
-     * @param color the color
+     * @param color El color del vehículo.
      */
     public void setColor(String color) {
         this.color = color;
     }
 
     /**
-     * Gets fecha fabricacion.
+     * Obtiene la fecha de fabricación del vehículo.
      *
-     * @return the fecha fabricacion
+     * @return La fecha de fabricación del vehículo.
      */
     public LocalDate getFechaFabricacion() {
         return fechaFabricacion;
     }
 
     /**
-     * Sets fecha fabricacion.
+     * Establece la fecha de fabricación del vehículo.
      *
-     * @param fechaFabricacion the fecha fabricacion
+     * @param fechaFabricacion La fecha de fabricación del vehículo.
      */
     public void setFechaFabricacion(LocalDate fechaFabricacion) {
         this.fechaFabricacion = fechaFabricacion;
     }
 
     /**
-     * Gets fecha itv.
+     * Obtiene la fecha de última ITV del vehículo.
      *
-     * @return the fecha itv
+     * @return La fecha de última ITV del vehículo.
      */
     public LocalDate getFechaITV() {
         return fechaITV;
     }
 
     /**
-     * Sets fecha itv.
+     * Establece la fecha de última ITV del vehículo.
      *
-     * @param fechaITV the fecha itv
+     * @param fechaITV La fecha de última ITV del vehículo.
      */
     public void setFechaITV(LocalDate fechaITV) {
         this.fechaITV = fechaITV;

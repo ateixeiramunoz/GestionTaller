@@ -3,35 +3,35 @@ package entidades;
 import java.time.LocalDateTime;
 
 /**
- * The type Instalacion de pieza.
+ * Esta clase representa una Instalación de Pieza. Contiene información sobre la instalación de una pieza en un determinado momento.
  */
 public class InstalacionDePieza {
 
     /**
-     * The Pieza.
+     * La pieza que ha sido instalada.
      */
     Pieza pieza;
     /**
-     * The Fecha instalacion.
+     * La fecha y hora en que se realizó la instalación.
      */
     LocalDateTime fechaInstalacion;
     /**
-     * The Fecha garantia.
+     * La fecha de vencimiento de la garantía asociada a la instalación de la pieza.
      */
     LocalDateTime fechaGarantia;
 
     /**
-     * Instantiates a new Instalacion de pieza.
+     * Constructor por defecto de la clase InstalacionDePieza.
      */
     public InstalacionDePieza() {
     }
 
     /**
-     * Instantiates a new Instalacion de pieza.
+     * Constructor de la clase InstalacionDePieza.
      *
-     * @param pieza            the pieza
-     * @param fechaInstalacion the fecha instalacion
-     * @param fechaGarantia    the fecha garantia
+     * @param pieza            La pieza que ha sido instalada.
+     * @param fechaInstalacion La fecha y hora en que se realizó la instalación.
+     * @param fechaGarantia    La fecha de vencimiento de la garantía asociada a la instalación de la pieza.
      */
     public InstalacionDePieza(Pieza pieza, LocalDateTime fechaInstalacion, LocalDateTime fechaGarantia) {
         this.pieza = pieza;
@@ -40,54 +40,54 @@ public class InstalacionDePieza {
     }
 
     /**
-     * Gets pieza.
+     * Obtiene la pieza que ha sido instalada.
      *
-     * @return the pieza
+     * @return La pieza instalada.
      */
     public Pieza getPieza() {
         return pieza;
     }
 
     /**
-     * Sets pieza.
+     * Establece la pieza que ha sido instalada.
      *
-     * @param pieza the pieza
+     * @param pieza La pieza instalada.
      */
     public void setPieza(Pieza pieza) {
         this.pieza = pieza;
     }
 
     /**
-     * Gets fecha instalacion.
+     * Obtiene la fecha y hora en que se realizó la instalación.
      *
-     * @return the fecha instalacion
+     * @return La fecha y hora de instalación.
      */
     public LocalDateTime getFechaInstalacion() {
         return fechaInstalacion;
     }
 
     /**
-     * Sets fecha instalacion.
+     * Establece la fecha y hora en que se realizó la instalación.
      *
-     * @param fechaInstalacion the fecha instalacion
+     * @param fechaInstalacion La fecha y hora de instalación.
      */
     public void setFechaInstalacion(LocalDateTime fechaInstalacion) {
         this.fechaInstalacion = fechaInstalacion;
     }
 
     /**
-     * Gets fecha garantia.
+     * Obtiene la fecha de vencimiento de la garantía asociada a la instalación de la pieza.
      *
-     * @return the fecha garantia
+     * @return La fecha de vencimiento de la garantía.
      */
     public LocalDateTime getFechaGarantia() {
         return fechaGarantia;
     }
 
     /**
-     * Sets fecha garantia.
+     * Establece la fecha de vencimiento de la garantía asociada a la instalación de la pieza.
      *
-     * @param fechaGarantia the fecha garantia
+     * @param fechaGarantia La fecha de vencimiento de la garantía.
      */
     public void setFechaGarantia(LocalDateTime fechaGarantia) {
         this.fechaGarantia = fechaGarantia;

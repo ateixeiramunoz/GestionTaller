@@ -1,192 +1,117 @@
 package entidades;
 
-import java.time.LocalDateTime;
-
 /**
- * The type Proveedor.
+ * Esta clase representa un Proveedor. Contiene información sobre una empresa o persona que suministra productos o servicios a la empresa.
  */
 public class Proveedor {
 
     /**
-     * The Cif.
+     * El código único que identifica al proveedor.
      */
-    String CIF;
+    String codigoProveedor;
     /**
-     * The Nombre proveedor.
+     * El nombre del proveedor.
      */
-    String nombreProveedor;
+    String nombre;
     /**
-     * The Nacional.
+     * La dirección del proveedor.
      */
-    boolean nacional;
+    String direccion;
     /**
-     * The Garantia.
+     * El número de teléfono del proveedor.
      */
-    boolean garantia;
-    /**
-     * The Tiempo de entrega.
-     */
-    LocalDateTime tiempoDeEntrega;
-    /**
-     * The Costed de envio.
-     */
-    float costedDeEnvio;
-    /**
-     * The Pedido minimo.
-     */
-    float pedidoMinimo;
-
+    String telefono;
 
     /**
-     * Instantiates a new Proveedor.
+     * Constructor por defecto de la clase Proveedor.
      */
     public Proveedor() {
     }
 
     /**
-     * Instantiates a new Proveedor.
+     * Constructor de la clase Proveedor.
      *
-     * @param CIF             the cif
-     * @param nombreProveedor the nombre proveedor
-     * @param nacional        the nacional
-     * @param garantia        the garantia
-     * @param tiempoDeEntrega the tiempo de entrega
-     * @param costedDeEnvio   the costed de envio
-     * @param pedidoMinimo    the pedido minimo
+     * @param codigoProveedor El código único que identifica al proveedor.
+     * @param nombre          El nombre del proveedor.
+     * @param direccion       La dirección del proveedor.
+     * @param telefono        El número de teléfono del proveedor.
      */
-    public Proveedor(String CIF, String nombreProveedor, boolean nacional, boolean garantia, LocalDateTime tiempoDeEntrega, float costedDeEnvio, float pedidoMinimo) {
-        this.CIF = CIF;
-        this.nombreProveedor = nombreProveedor;
-        this.nacional = nacional;
-        this.garantia = garantia;
-        this.tiempoDeEntrega = tiempoDeEntrega;
-        this.costedDeEnvio = costedDeEnvio;
-        this.pedidoMinimo = pedidoMinimo;
+    public Proveedor(String codigoProveedor, String nombre, String direccion, String telefono) {
+        this.codigoProveedor = codigoProveedor;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
     }
 
     /**
-     * Gets cif.
+     * Obtiene el código único que identifica al proveedor.
      *
-     * @return the cif
+     * @return El código único del proveedor.
      */
-    public String getCIF() {
-        return CIF;
+    public String getCodigoProveedor() {
+        return codigoProveedor;
     }
 
     /**
-     * Sets cif.
+     * Establece el código único que identifica al proveedor.
      *
-     * @param CIF the cif
+     * @param codigoProveedor El código único del proveedor.
      */
-    public void setCIF(String CIF) {
-        this.CIF = CIF;
+    public void setCodigoProveedor(String codigoProveedor) {
+        this.codigoProveedor = codigoProveedor;
     }
 
     /**
-     * Gets nombre proveedor.
+     * Obtiene el nombre del proveedor.
      *
-     * @return the nombre proveedor
+     * @return El nombre del proveedor.
      */
-    public String getNombreProveedor() {
-        return nombreProveedor;
+    public String getNombre() {
+        return nombre;
     }
 
     /**
-     * Sets nombre proveedor.
+     * Establece el nombre del proveedor.
      *
-     * @param nombreProveedor the nombre proveedor
+     * @param nombre El nombre del proveedor.
      */
-    public void setNombreProveedor(String nombreProveedor) {
-        this.nombreProveedor = nombreProveedor;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     /**
-     * Is nacional boolean.
+     * Obtiene la dirección del proveedor.
      *
-     * @return the boolean
+     * @return La dirección del proveedor.
      */
-    public boolean isNacional() {
-        return nacional;
+    public String getDireccion() {
+        return direccion;
     }
 
     /**
-     * Sets nacional.
+     * Establece la dirección del proveedor.
      *
-     * @param nacional the nacional
+     * @param direccion La dirección del proveedor.
      */
-    public void setNacional(boolean nacional) {
-        this.nacional = nacional;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     /**
-     * Is garantia boolean.
+     * Obtiene el número de teléfono del proveedor.
      *
-     * @return the boolean
+     * @return El número de teléfono del proveedor.
      */
-    public boolean isGarantia() {
-        return garantia;
+    public String getTelefono() {
+        return telefono;
     }
 
     /**
-     * Sets garantia.
+     * Establece el número de teléfono del proveedor.
      *
-     * @param garantia the garantia
+     * @param telefono El número de teléfono del proveedor.
      */
-    public void setGarantia(boolean garantia) {
-        this.garantia = garantia;
-    }
-
-    /**
-     * Gets tiempo de entrega.
-     *
-     * @return the tiempo de entrega
-     */
-    public LocalDateTime getTiempoDeEntrega() {
-        return tiempoDeEntrega;
-    }
-
-    /**
-     * Sets tiempo de entrega.
-     *
-     * @param tiempoDeEntrega the tiempo de entrega
-     */
-    public void setTiempoDeEntrega(LocalDateTime tiempoDeEntrega) {
-        this.tiempoDeEntrega = tiempoDeEntrega;
-    }
-
-    /**
-     * Gets costed de envio.
-     *
-     * @return the costed de envio
-     */
-    public float getCostedDeEnvio() {
-        return costedDeEnvio;
-    }
-
-    /**
-     * Sets costed de envio.
-     *
-     * @param costedDeEnvio the costed de envio
-     */
-    public void setCostedDeEnvio(float costedDeEnvio) {
-        this.costedDeEnvio = costedDeEnvio;
-    }
-
-    /**
-     * Gets pedido minimo.
-     *
-     * @return the pedido minimo
-     */
-    public float getPedidoMinimo() {
-        return pedidoMinimo;
-    }
-
-    /**
-     * Sets pedido minimo.
-     *
-     * @param pedidoMinimo the pedido minimo
-     */
-    public void setPedidoMinimo(float pedidoMinimo) {
-        this.pedidoMinimo = pedidoMinimo;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 }

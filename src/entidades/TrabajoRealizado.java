@@ -3,56 +3,56 @@ package entidades;
 import java.time.LocalDateTime;
 
 /**
- * The type Trabajo realizado.
+ * Esta clase representa un trabajo realizado en el taller. Contiene información sobre el servicio realizado, las fechas de inicio y fin, las fechas de garantía para revisión, montaje y pieza, y el empleado que realizó el trabajo.
  */
 public class TrabajoRealizado {
 
     /**
-     * The Servicio.
+     * El servicio realizado.
      */
     Servicio servicio;
     /**
-     * The Fecha inicio.
+     * La fecha de inicio del trabajo.
      */
     LocalDateTime fechaInicio;
     /**
-     * The Fecha fin.
+     * La fecha de fin del trabajo.
      */
     LocalDateTime fechaFin;
     /**
-     * The Fecha garantia de revision.
+     * La fecha de garantía para revisión.
      */
     LocalDateTime fechaGarantiaDeRevision;
     /**
-     * The Fecha garantia montaje.
+     * La fecha de garantía para montaje.
      */
     LocalDateTime fechaGarantiaMontaje;
     /**
-     * The Fecha garantia pieza.
+     * La fecha de garantía para la pieza.
      */
     LocalDateTime fechaGarantiaPieza;
     /**
-     * The Empleado.
+     * El empleado que realizó el trabajo.
      */
     Empleado empleado;
 
 
     /**
-     * Instantiates a new Trabajo realizado.
+     * Constructor por defecto de la clase TrabajoRealizado.
      */
     public TrabajoRealizado() {
     }
 
     /**
-     * Instantiates a new Trabajo realizado.
+     * Constructor de la clase TrabajoRealizado.
      *
-     * @param servicio                the servicio
-     * @param fechaInicio             the fecha inicio
-     * @param fechaFin                the fecha fin
-     * @param fechaGarantiaDeRevision the fecha garantia de revision
-     * @param fechaGarantiaMontaje    the fecha garantia montaje
-     * @param fechaGarantiaPieza      the fecha garantia pieza
-     * @param empleado                the empleado
+     * @param servicio                El servicio realizado.
+     * @param fechaInicio             La fecha de inicio del trabajo.
+     * @param fechaFin                La fecha de fin del trabajo.
+     * @param fechaGarantiaDeRevision La fecha de garantía para revisión.
+     * @param fechaGarantiaMontaje    La fecha de garantía para montaje.
+     * @param fechaGarantiaPieza      La fecha de garantía para la pieza.
+     * @param empleado                El empleado que realizó el trabajo.
      */
     public TrabajoRealizado(Servicio servicio, LocalDateTime fechaInicio, LocalDateTime fechaFin, LocalDateTime fechaGarantiaDeRevision, LocalDateTime fechaGarantiaMontaje, LocalDateTime fechaGarantiaPieza, Empleado empleado) {
         this.servicio = servicio;
@@ -65,126 +65,126 @@ public class TrabajoRealizado {
     }
 
     /**
-     * Gets servicio.
+     * Obtiene el servicio realizado.
      *
-     * @return the servicio
+     * @return El servicio realizado.
      */
     public Servicio getServicio() {
         return servicio;
     }
 
     /**
-     * Sets servicio.
+     * Establece el servicio realizado.
      *
-     * @param servicio the servicio
+     * @param servicio El servicio realizado.
      */
     public void setServicio(Servicio servicio) {
         this.servicio = servicio;
     }
 
     /**
-     * Gets fecha inicio.
+     * Obtiene la fecha de inicio del trabajo.
      *
-     * @return the fecha inicio
+     * @return La fecha de inicio del trabajo.
      */
     public LocalDateTime getFechaInicio() {
         return fechaInicio;
     }
 
     /**
-     * Sets fecha inicio.
+     * Establece la fecha de inicio del trabajo.
      *
-     * @param fechaInicio the fecha inicio
+     * @param fechaInicio La fecha de inicio del trabajo.
      */
     public void setFechaInicio(LocalDateTime fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
     /**
-     * Gets fecha fin.
+     * Obtiene la fecha de fin del trabajo.
      *
-     * @return the fecha fin
+     * @return La fecha de fin del trabajo.
      */
     public LocalDateTime getFechaFin() {
         return fechaFin;
     }
 
     /**
-     * Sets fecha fin.
+     * Establece la fecha de fin del trabajo.
      *
-     * @param fechaFin the fecha fin
+     * @param fechaFin La fecha de fin del trabajo.
      */
     public void setFechaFin(LocalDateTime fechaFin) {
         this.fechaFin = fechaFin;
     }
 
     /**
-     * Gets fecha garantia de revision.
+     * Obtiene la fecha de garantía para revisión.
      *
-     * @return the fecha garantia de revision
+     * @return La fecha de garantía para revisión.
      */
     public LocalDateTime getFechaGarantiaDeRevision() {
         return fechaGarantiaDeRevision;
     }
 
     /**
-     * Sets fecha garantia de revision.
+     * Establece la fecha de garantía para revisión.
      *
-     * @param fechaGarantiaDeRevision the fecha garantia de revision
+     * @param fechaGarantiaDeRevision La fecha de garantía para revisión.
      */
     public void setFechaGarantiaDeRevision(LocalDateTime fechaGarantiaDeRevision) {
         this.fechaGarantiaDeRevision = fechaGarantiaDeRevision;
     }
 
     /**
-     * Gets fecha garantia montaje.
+     * Obtiene la fecha de garantía para montaje.
      *
-     * @return the fecha garantia montaje
+     * @return La fecha de garantía para montaje.
      */
     public LocalDateTime getFechaGarantiaMontaje() {
         return fechaGarantiaMontaje;
     }
 
     /**
-     * Sets fecha garantia montaje.
+     * Establece la fecha de garantía para montaje.
      *
-     * @param fechaGarantiaMontaje the fecha garantia montaje
+     * @param fechaGarantiaMontaje La fecha de garantía para montaje.
      */
     public void setFechaGarantiaMontaje(LocalDateTime fechaGarantiaMontaje) {
         this.fechaGarantiaMontaje = fechaGarantiaMontaje;
     }
 
     /**
-     * Gets fecha garantia pieza.
+     * Obtiene la fecha de garantía para la pieza.
      *
-     * @return the fecha garantia pieza
+     * @return La fecha de garantía para la pieza.
      */
     public LocalDateTime getFechaGarantiaPieza() {
         return fechaGarantiaPieza;
     }
 
     /**
-     * Sets fecha garantia pieza.
+     * Establece la fecha de garantía para la pieza.
      *
-     * @param fechaGarantiaPieza the fecha garantia pieza
+     * @param fechaGarantiaPieza La fecha de garantía para la pieza.
      */
     public void setFechaGarantiaPieza(LocalDateTime fechaGarantiaPieza) {
         this.fechaGarantiaPieza = fechaGarantiaPieza;
     }
 
     /**
-     * Gets empleado.
+     * Obtiene el empleado que realizó el trabajo.
      *
-     * @return the empleado
+     * @return El empleado que realizó el trabajo.
      */
     public Empleado getEmpleado() {
         return empleado;
     }
 
     /**
-     * Sets empleado.
+     * Establece el empleado que realizó el trabajo.
      *
-     * @param empleado the empleado
+     * @param empleado El empleado que realizó el trabajo.
      */
     public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;

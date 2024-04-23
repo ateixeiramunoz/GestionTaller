@@ -1,51 +1,47 @@
 package entidades;
-
-import java.sql.Array;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase Albaran. Un albarán o nota de entrega, es un documento mercantil que acredita la entrega de un pedido. Al comprador le sirve para comprobar que lo que ha recibido coincide con lo que solicitó y verificarlo con la facturación del pedido cuando ésta sea posterior.
+ * Esta clase representa un Albarán. Un albarán, también conocido como nota de entrega, es un documento mercantil que acredita la entrega de un pedido. Para el comprador, este documento es fundamental ya que le permite verificar que lo que ha recibido coincide con lo que solicitó y también le facilita la comprobación con la facturación del pedido en el futuro, especialmente si esta factura es emitida posteriormente.
  */
 public class Albaran {
 
     /**
-     * El número del albarán. Sirve para identificarlo de manera unequívoca.
+     * El número único que identifica al albarán.
      */
     String numeroAlbaran;
     /**
-     * The Fecha entrega.
+     * La fecha y hora en que se realizó la entrega del pedido asociado al albarán.
      */
     LocalDateTime fechaEntrega;
     /**
-     * The Piezas.
+     * Las piezas entregadas que se relacionan con este albarán.
      */
     List<Pieza> piezas;
     /**
-     * The Proveedor.
+     * El proveedor que realizó la entrega.
      */
     Proveedor proveedor;
     /**
-     * The Factura.
+     * La factura asociada a este albarán, si es que ya ha sido generada.
      */
     Factura factura;
 
-
     /**
-     * Instantiates a new Albaran.
+     * Constructor por defecto de la clase Albaran.
      */
     public Albaran() {
     }
 
     /**
-     * Instantiates a new Albaran.
+     * Constructor de la clase Albaran.
      *
-     * @param numeroAlbaran the numero albaran
-     * @param fechaEntrega  the fecha entrega
-     * @param piezas        the piezas
-     * @param proveedor     the proveedor
-     * @param factura       the factura
+     * @param numeroAlbaran El número único que identifica al albarán.
+     * @param fechaEntrega  La fecha y hora en que se realizó la entrega del pedido asociado al albarán.
+     * @param piezas        Las piezas entregadas que se relacionan con este albarán.
+     * @param proveedor     El proveedor que realizó la entrega.
+     * @param factura       La factura asociada a este albarán, si es que ya ha sido generada.
      */
     public Albaran(String numeroAlbaran, LocalDateTime fechaEntrega, List<Pieza> piezas, Proveedor proveedor, Factura factura) {
         this.numeroAlbaran = numeroAlbaran;
@@ -56,90 +52,90 @@ public class Albaran {
     }
 
     /**
-     * Gets numero albaran.
+     * Obtiene el número único que identifica al albarán.
      *
-     * @return the numero albaran
+     * @return El número único del albarán.
      */
     public String getNumeroAlbaran() {
         return numeroAlbaran;
     }
 
     /**
-     * Sets numero albaran.
+     * Establece el número único que identifica al albarán.
      *
-     * @param numeroAlbaran the numero albaran
+     * @param numeroAlbaran El número único del albarán.
      */
     public void setNumeroAlbaran(String numeroAlbaran) {
         this.numeroAlbaran = numeroAlbaran;
     }
 
     /**
-     * Gets fecha entrega.
+     * Obtiene la fecha y hora en que se realizó la entrega del pedido asociado al albarán.
      *
-     * @return the fecha entrega
+     * @return La fecha y hora de entrega del pedido.
      */
     public LocalDateTime getFechaEntrega() {
         return fechaEntrega;
     }
 
     /**
-     * Sets fecha entrega.
+     * Establece la fecha y hora en que se realizó la entrega del pedido asociado al albarán.
      *
-     * @param fechaEntrega the fecha entrega
+     * @param fechaEntrega La fecha y hora de entrega del pedido.
      */
     public void setFechaEntrega(LocalDateTime fechaEntrega) {
         this.fechaEntrega = fechaEntrega;
     }
 
     /**
-     * Gets piezas.
+     * Obtiene la lista de piezas entregadas relacionadas con este albarán.
      *
-     * @return the piezas
+     * @return La lista de piezas entregadas.
      */
     public List<Pieza> getPiezas() {
         return piezas;
     }
 
     /**
-     * Sets piezas.
+     * Establece la lista de piezas entregadas relacionadas con este albarán.
      *
-     * @param piezas the piezas
+     * @param piezas La lista de piezas entregadas.
      */
     public void setPiezas(List<Pieza> piezas) {
         this.piezas = piezas;
     }
 
     /**
-     * Gets proveedor.
+     * Obtiene el proveedor que realizó la entrega.
      *
-     * @return the proveedor
+     * @return El proveedor que realizó la entrega.
      */
     public Proveedor getProveedor() {
         return proveedor;
     }
 
     /**
-     * Sets proveedor.
+     * Establece el proveedor que realizó la entrega.
      *
-     * @param proveedor the proveedor
+     * @param proveedor El proveedor que realizó la entrega.
      */
     public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
 
     /**
-     * Gets factura.
+     * Obtiene la factura asociada a este albarán, si es que ya ha sido generada.
      *
-     * @return the factura
+     * @return La factura asociada al albarán.
      */
     public Factura getFactura() {
         return factura;
     }
 
     /**
-     * Sets factura.
+     * Establece la factura asociada a este albarán.
      *
-     * @param factura the factura
+     * @param factura La factura asociada al albarán.
      */
     public void setFactura(Factura factura) {
         this.factura = factura;

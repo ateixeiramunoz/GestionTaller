@@ -1,45 +1,45 @@
 package entidades;
 
 /**
- * The type Pieza.
+ * Esta clase representa una Pieza. Contiene información sobre una pieza de repuesto utilizada en el mantenimiento o reparación de vehículos.
  */
 public class Pieza {
 
     /**
-     * The Codigo de pieza.
+     * El código único que identifica a la pieza.
      */
     String codigoDePieza;
     /**
-     * The Marca.
+     * La marca de la pieza.
      */
     String marca;
     /**
-     * The Descripción.
+     * La descripción de la pieza.
      */
     String descripción;
     /**
-     * The Garantia fabricante.
+     * Indica si la pieza tiene garantía del fabricante.
      */
     boolean garantiaFabricante;
     /**
-     * The Garantia montaje.
+     * Indica si la pieza tiene garantía de montaje.
      */
     boolean garantiaMontaje;
 
     /**
-     * Instantiates a new Pieza.
+     * Constructor por defecto de la clase Pieza.
      */
     public Pieza() {
     }
 
     /**
-     * Instantiates a new Pieza.
+     * Constructor de la clase Pieza.
      *
-     * @param codigoDePieza      the codigo de pieza
-     * @param marca              the marca
-     * @param descripción        the descripción
-     * @param garantiaFabricante the garantia fabricante
-     * @param garantiaMontaje    the garantia montaje
+     * @param codigoDePieza      El código único que identifica a la pieza.
+     * @param marca              La marca de la pieza.
+     * @param descripción        La descripción de la pieza.
+     * @param garantiaFabricante Indica si la pieza tiene garantía del fabricante.
+     * @param garantiaMontaje    Indica si la pieza tiene garantía de montaje.
      */
     public Pieza(String codigoDePieza, String marca, String descripción, boolean garantiaFabricante, boolean garantiaMontaje) {
         this.codigoDePieza = codigoDePieza;
@@ -50,90 +50,90 @@ public class Pieza {
     }
 
     /**
-     * Gets codigo de pieza.
+     * Obtiene el código único que identifica a la pieza.
      *
-     * @return the codigo de pieza
+     * @return El código único de la pieza.
      */
     public String getCodigoDePieza() {
         return codigoDePieza;
     }
 
     /**
-     * Sets codigo de pieza.
+     * Establece el código único que identifica a la pieza.
      *
-     * @param codigoDePieza the codigo de pieza
+     * @param codigoDePieza El código único de la pieza.
      */
     public void setCodigoDePieza(String codigoDePieza) {
         this.codigoDePieza = codigoDePieza;
     }
 
     /**
-     * Gets marca.
+     * Obtiene la marca de la pieza.
      *
-     * @return the marca
+     * @return La marca de la pieza.
      */
     public String getMarca() {
         return marca;
     }
 
     /**
-     * Sets marca.
+     * Establece la marca de la pieza.
      *
-     * @param marca the marca
+     * @param marca La marca de la pieza.
      */
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
     /**
-     * Get descripción string.
+     * Obtiene la descripción de la pieza.
      *
-     * @return the string
+     * @return La descripción de la pieza.
      */
     public String getDescripción() {
         return descripción;
     }
 
     /**
-     * Set descripción.
+     * Establece la descripción de la pieza.
      *
-     * @param descripción the descripción
+     * @param descripción La descripción de la pieza.
      */
     public void setDescripción(String descripción) {
         this.descripción = descripción;
     }
 
     /**
-     * Is garantia fabricante boolean.
+     * Indica si la pieza tiene garantía del fabricante.
      *
-     * @return the boolean
+     * @return true si la pieza tiene garantía del fabricante, false en caso contrario.
      */
     public boolean isGarantiaFabricante() {
         return garantiaFabricante;
     }
 
     /**
-     * Sets garantia fabricante.
+     * Establece si la pieza tiene garantía del fabricante.
      *
-     * @param garantiaFabricante the garantia fabricante
+     * @param garantiaFabricante true si la pieza tiene garantía del fabricante, false en caso contrario.
      */
     public void setGarantiaFabricante(boolean garantiaFabricante) {
         this.garantiaFabricante = garantiaFabricante;
     }
 
     /**
-     * Is garantia montaje boolean.
+     * Indica si la pieza tiene garantía de montaje.
      *
-     * @return the boolean
+     * @return true si la pieza tiene garantía de montaje, false en caso contrario.
      */
     public boolean isGarantiaMontaje() {
         return garantiaMontaje;
     }
 
     /**
-     * Sets garantia montaje.
+     * Establece si la pieza tiene garantía de montaje.
      *
-     * @param garantiaMontaje the garantia montaje
+     * @param garantiaMontaje true si la pieza tiene garantía de montaje, false en caso contrario.
      */
     public void setGarantiaMontaje(boolean garantiaMontaje) {
         this.garantiaMontaje = garantiaMontaje;

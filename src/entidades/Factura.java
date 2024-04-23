@@ -4,65 +4,65 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * The type Factura.
+ * Esta clase representa una Factura. Contiene información sobre las transacciones comerciales entre la empresa y los clientes.
  */
 public class Factura {
 
     /**
-     * The Estado pago.
+     * Indica el estado de pago de la factura.
      */
     boolean estadoPago;
     /**
-     * The Importe.
+     * El importe total de la factura.
      */
     float importe;
 
     /**
-     * The Codigo factura.
+     * El código único que identifica a la factura.
      */
     String codigoFactura;
 
     /**
-     * The Fecha factura.
+     * La fecha y hora en que se emitió la factura.
      */
     LocalDateTime fechaFactura;
     /**
-     * The Fecha vencimiento.
+     * La fecha de vencimiento de la factura.
      */
     LocalDateTime fechaVencimiento;
 
     /**
-     * The Cliente.
+     * El cliente al que se emite la factura.
      */
     Cliente cliente;
     /**
-     * The Empleado.
+     * El empleado que emitió la factura.
      */
     Empleado empleado;
 
     /**
-     * The Trabajos realizados.
+     * Los trabajos realizados que se detallan en la factura.
      */
     List<TrabajoRealizado> trabajosRealizados;
 
 
     /**
-     * Instantiates a new Factura.
+     * Constructor por defecto de la clase Factura.
      */
     public Factura() {
     }
 
     /**
-     * Instantiates a new Factura.
+     * Constructor de la clase Factura.
      *
-     * @param estadoPago         the estado pago
-     * @param importe            the importe
-     * @param codigoFactura      the codigo factura
-     * @param fechaFactura       the fecha factura
-     * @param fechaVencimiento   the fecha vencimiento
-     * @param cliente            the cliente
-     * @param empleado           the empleado
-     * @param trabajosRealizados the trabajos realizados
+     * @param estadoPago         Indica el estado de pago de la factura.
+     * @param importe            El importe total de la factura.
+     * @param codigoFactura      El código único que identifica a la factura.
+     * @param fechaFactura       La fecha y hora en que se emitió la factura.
+     * @param fechaVencimiento   La fecha de vencimiento de la factura.
+     * @param cliente            El cliente al que se emite la factura.
+     * @param empleado           El empleado que emitió la factura.
+     * @param trabajosRealizados Los trabajos realizados que se detallan en la factura.
      */
     public Factura(boolean estadoPago, float importe, String codigoFactura, LocalDateTime fechaFactura, LocalDateTime fechaVencimiento, Cliente cliente, Empleado empleado, List<TrabajoRealizado> trabajosRealizados) {
         this.estadoPago = estadoPago;
@@ -76,144 +76,144 @@ public class Factura {
     }
 
     /**
-     * Is estado pago boolean.
+     * Indica si la factura está pagada o no.
      *
-     * @return the boolean
+     * @return true si la factura está pagada, false en caso contrario.
      */
     public boolean isEstadoPago() {
         return estadoPago;
     }
 
     /**
-     * Sets estado pago.
+     * Establece el estado de pago de la factura.
      *
-     * @param estadoPago the estado pago
+     * @param estadoPago true si la factura está pagada, false en caso contrario.
      */
     public void setEstadoPago(boolean estadoPago) {
         this.estadoPago = estadoPago;
     }
 
     /**
-     * Gets importe.
+     * Obtiene el importe total de la factura.
      *
-     * @return the importe
+     * @return El importe total de la factura.
      */
     public float getImporte() {
         return importe;
     }
 
     /**
-     * Sets importe.
+     * Establece el importe total de la factura.
      *
-     * @param importe the importe
+     * @param importe El importe total de la factura.
      */
     public void setImporte(float importe) {
         this.importe = importe;
     }
 
     /**
-     * Gets codigo factura.
+     * Obtiene el código único que identifica a la factura.
      *
-     * @return the codigo factura
+     * @return El código único de la factura.
      */
     public String getCodigoFactura() {
         return codigoFactura;
     }
 
     /**
-     * Sets codigo factura.
+     * Establece el código único que identifica a la factura.
      *
-     * @param codigoFactura the codigo factura
+     * @param codigoFactura El código único de la factura.
      */
     public void setCodigoFactura(String codigoFactura) {
         this.codigoFactura = codigoFactura;
     }
 
     /**
-     * Gets fecha factura.
+     * Obtiene la fecha y hora en que se emitió la factura.
      *
-     * @return the fecha factura
+     * @return La fecha y hora de emisión de la factura.
      */
     public LocalDateTime getFechaFactura() {
         return fechaFactura;
     }
 
     /**
-     * Sets fecha factura.
+     * Establece la fecha y hora en que se emitió la factura.
      *
-     * @param fechaFactura the fecha factura
+     * @param fechaFactura La fecha y hora de emisión de la factura.
      */
     public void setFechaFactura(LocalDateTime fechaFactura) {
         this.fechaFactura = fechaFactura;
     }
 
     /**
-     * Gets fecha vencimiento.
+     * Obtiene la fecha de vencimiento de la factura.
      *
-     * @return the fecha vencimiento
+     * @return La fecha de vencimiento de la factura.
      */
     public LocalDateTime getFechaVencimiento() {
         return fechaVencimiento;
     }
 
     /**
-     * Sets fecha vencimiento.
+     * Establece la fecha de vencimiento de la factura.
      *
-     * @param fechaVencimiento the fecha vencimiento
+     * @param fechaVencimiento La fecha de vencimiento de la factura.
      */
     public void setFechaVencimiento(LocalDateTime fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
 
     /**
-     * Gets cliente.
+     * Obtiene el cliente al que se emite la factura.
      *
-     * @return the cliente
+     * @return El cliente al que se emite la factura.
      */
     public Cliente getCliente() {
         return cliente;
     }
 
     /**
-     * Sets cliente.
+     * Establece el cliente al que se emite la factura.
      *
-     * @param cliente the cliente
+     * @param cliente El cliente al que se emite la factura.
      */
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
     /**
-     * Gets empleado.
+     * Obtiene el empleado que emitió la factura.
      *
-     * @return the empleado
+     * @return El empleado que emitió la factura.
      */
     public Empleado getEmpleado() {
         return empleado;
     }
 
     /**
-     * Sets empleado.
+     * Establece el empleado que emitió la factura.
      *
-     * @param empleado the empleado
+     * @param empleado El empleado que emitió la factura.
      */
     public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
     }
 
     /**
-     * Gets trabajos realizados.
+     * Obtiene la lista de trabajos realizados que se detallan en la factura.
      *
-     * @return the trabajos realizados
+     * @return La lista de trabajos realizados.
      */
     public List<TrabajoRealizado> getTrabajosRealizados() {
         return trabajosRealizados;
     }
 
     /**
-     * Sets trabajos realizados.
+     * Establece la lista de trabajos realizados que se detallan en la factura.
      *
-     * @param trabajosRealizados the trabajos realizados
+     * @param trabajosRealizados La lista de trabajos realizados.
      */
     public void setTrabajosRealizados(List<TrabajoRealizado> trabajosRealizados) {
         this.trabajosRealizados = trabajosRealizados;

@@ -1,35 +1,35 @@
 package entidades;
 
 /**
- * The type Servicio.
+ * Esta clase representa un servicio ofrecido en el catálogo de servicios. Contiene información sobre la descripción del servicio, su precio por unidad y su precio por hora.
  */
 public class Servicio {
 
     /**
-     * The Descripcion.
+     * La descripción del servicio.
      */
-    String descripcion; //Cambio de rueda
+    private String descripcion;
     /**
-     * The Precio unidad.
+     * El precio por unidad del servicio.
      */
-    float precioUnidad;
+    private float precioUnidad;
     /**
-     * The Precio hora.
+     * El precio por hora del servicio.
      */
-    float precioHora;
+    private float precioHora;
 
     /**
-     * Instantiates a new Servicio.
+     * Constructor por defecto de la clase Servicio.
      */
     public Servicio() {
     }
 
     /**
-     * Instantiates a new Servicio.
+     * Constructor de la clase Servicio.
      *
-     * @param descripcion  the descripcion
-     * @param precioUnidad the precio unidad
-     * @param precioHora   the precio hora
+     * @param descripcion  La descripción del servicio.
+     * @param precioUnidad El precio por unidad del servicio.
+     * @param precioHora   El precio por hora del servicio.
      */
     public Servicio(String descripcion, float precioUnidad, float precioHora) {
         this.descripcion = descripcion;
@@ -38,54 +38,54 @@ public class Servicio {
     }
 
     /**
-     * Gets descripcion.
+     * Obtiene la descripción del servicio.
      *
-     * @return the descripcion
+     * @return La descripción del servicio.
      */
     public String getDescripcion() {
         return descripcion;
     }
 
     /**
-     * Sets descripcion.
+     * Establece la descripción del servicio.
      *
-     * @param descripcion the descripcion
+     * @param descripcion La descripción del servicio.
      */
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
     /**
-     * Gets precio unidad.
+     * Obtiene el precio por unidad del servicio.
      *
-     * @return the precio unidad
+     * @return El precio por unidad del servicio.
      */
     public float getPrecioUnidad() {
         return precioUnidad;
     }
 
     /**
-     * Sets precio unidad.
+     * Establece el precio por unidad del servicio.
      *
-     * @param precioUnidad the precio unidad
+     * @param precioUnidad El precio por unidad del servicio.
      */
     public void setPrecioUnidad(float precioUnidad) {
         this.precioUnidad = precioUnidad;
     }
 
     /**
-     * Gets precio hora.
+     * Obtiene el precio por hora del servicio.
      *
-     * @return the precio hora
+     * @return El precio por hora del servicio.
      */
     public float getPrecioHora() {
         return precioHora;
     }
 
     /**
-     * Sets precio hora.
+     * Establece el precio por hora del servicio.
      *
-     * @param precioHora the precio hora
+     * @param precioHora El precio por hora del servicio.
      */
     public void setPrecioHora(float precioHora) {
         this.precioHora = precioHora;

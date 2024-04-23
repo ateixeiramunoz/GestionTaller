@@ -4,47 +4,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Cliente. Esta es la clase que utilizamos para guardar la informacion de los clientes.
+ *  Esta clase representa a un Cliente del taller. Contiene información relacionada con los clientes del taller, quienes traen vehículos para reparar o cambiar piezas.
  */
 public class Cliente {
 
-
     /**
-     * The Codigo cliente.
+     * El código único que identifica al cliente.
      */
     String codigoCliente;
     /**
-     * The Nombre.
+     * El nombre del cliente.
      */
     String nombre;
     /**
-     * The Direccion.
+     * La dirección del cliente.
      */
     String direccion;
     /**
-     * The Dni.
+     * El número de identificación del cliente (por ejemplo, DNI).
      */
     String dni;
     /**
-     * The Vehiculos.
+     * La lista de vehículos asociados a este cliente.
      */
     List<Vehiculo> vehiculos;
 
 
     /**
-     * Instantiates a new Cliente.
+     * Constructor por defecto de la clase Cliente.
      */
     public Cliente() {
     }
 
     /**
-     * Instantiates a new Cliente.
+     * Constructor de la clase Cliente.
      *
-     * @param codigoCliente the codigo cliente
-     * @param nombre        the nombre
-     * @param direccion     the direccion
-     * @param dni           the dni
-     * @param vehiculos     the vehiculos
+     * @param codigoCliente El código único que identifica al cliente.
+     * @param nombre        El nombre del cliente.
+     * @param direccion     La dirección del cliente.
+     * @param dni           El número de identificación del cliente (por ejemplo, DNI).
+     * @param vehiculos     La lista de vehículos asociados a este cliente.
      */
     public Cliente(String codigoCliente, String nombre, String direccion, String dni, List<Vehiculo> vehiculos) {
         this.codigoCliente = codigoCliente;
@@ -55,90 +54,90 @@ public class Cliente {
     }
 
     /**
-     * Gets codigo cliente.
+     * Obtiene el código único que identifica al cliente.
      *
-     * @return the codigo cliente
+     * @return El código único del cliente.
      */
     public String getCodigoCliente() {
         return codigoCliente;
     }
 
     /**
-     * Sets codigo cliente.
+     * Establece el código único que identifica al cliente.
      *
-     * @param codigoCliente the codigo cliente
+     * @param codigoCliente El código único del cliente.
      */
     public void setCodigoCliente(String codigoCliente) {
         this.codigoCliente = codigoCliente;
     }
 
     /**
-     * Gets nombre.
+     * Obtiene el nombre del cliente.
      *
-     * @return the nombre
+     * @return El nombre del cliente.
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * Sets nombre.
+     * Establece el nombre del cliente.
      *
-     * @param nombre the nombre
+     * @param nombre El nombre del cliente.
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * Gets direccion.
+     * Obtiene la dirección del cliente.
      *
-     * @return the direccion
+     * @return La dirección del cliente.
      */
     public String getDireccion() {
         return direccion;
     }
 
     /**
-     * Sets direccion.
+     * Establece la dirección del cliente.
      *
-     * @param direccion the direccion
+     * @param direccion La dirección del cliente.
      */
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
     /**
-     * Gets dni.
+     * Obtiene el número de identificación del cliente (por ejemplo, DNI).
      *
-     * @return the dni
+     * @return El número de identificación del cliente.
      */
     public String getDni() {
         return dni;
     }
 
     /**
-     * Sets dni.
+     * Establece el número de identificación del cliente (por ejemplo, DNI).
      *
-     * @param dni the dni
+     * @param dni El número de identificación del cliente.
      */
     public void setDni(String dni) {
         this.dni = dni;
     }
 
     /**
-     * Gets vehiculos.
+     * Obtiene la lista de vehículos asociados a este cliente.
      *
-     * @return the vehiculos
+     * @return La lista de vehículos asociados al cliente.
      */
     public List<Vehiculo> getVehiculos() {
         return vehiculos;
     }
 
     /**
-     * Sets vehiculos.
+     * Establece la lista de vehículos asociados a este cliente.
      *
-     * @param vehiculos the vehiculos
+     * @param vehiculos La lista de vehículos asociados al cliente.
      */
     public void setVehiculos(List<Vehiculo> vehiculos) {
         this.vehiculos = vehiculos;

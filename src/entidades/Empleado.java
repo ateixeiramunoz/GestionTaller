@@ -3,46 +3,46 @@ package entidades;
 import java.util.List;
 
 /**
- * The type Empleado.
+ * Esta clase representa a un Empleado. Contiene información relacionada con los empleados de la empresa.
  */
 public class Empleado {
 
     /**
-     * The Codigo empleado.
+     * El código único que identifica al empleado.
      */
     String codigoEmpleado;
     /**
-     * The Nombre.
+     * El nombre del empleado.
      */
     String nombre;
     /**
-     * The Direccion.
+     * La dirección del empleado.
      */
     String direccion;
     /**
-     * The Dni.
+     * El número de identificación del empleado (por ejemplo, DNI).
      */
     String dni;
     /**
-     * The Categoria.
+     * La categoría o cargo del empleado en la empresa.
      */
     String categoria;
 
 
     /**
-     * Instantiates a new Empleado.
+     * Constructor por defecto de la clase Empleado.
      */
     public Empleado() {
     }
 
     /**
-     * Instantiates a new Empleado.
+     * Constructor de la clase Empleado.
      *
-     * @param codigoEmpleado the codigo empleado
-     * @param nombre         the nombre
-     * @param direccion      the direccion
-     * @param dni            the dni
-     * @param categoria      the categoria
+     * @param codigoEmpleado El código único que identifica al empleado.
+     * @param nombre         El nombre del empleado.
+     * @param direccion      La dirección del empleado.
+     * @param dni            El número de identificación del empleado (por ejemplo, DNI).
+     * @param categoria      La categoría o cargo del empleado en la empresa.
      */
     public Empleado(String codigoEmpleado, String nombre, String direccion, String dni, String categoria) {
         this.codigoEmpleado = codigoEmpleado;
@@ -53,90 +53,90 @@ public class Empleado {
     }
 
     /**
-     * Gets codigo empleado.
+     * Obtiene el código único que identifica al empleado.
      *
-     * @return the codigo empleado
+     * @return El código único del empleado.
      */
     public String getCodigoEmpleado() {
         return codigoEmpleado;
     }
 
     /**
-     * Sets codigo empleado.
+     * Establece el código único que identifica al empleado.
      *
-     * @param codigoEmpleado the codigo empleado
+     * @param codigoEmpleado El código único del empleado.
      */
     public void setCodigoEmpleado(String codigoEmpleado) {
         this.codigoEmpleado = codigoEmpleado;
     }
 
     /**
-     * Gets nombre.
+     * Obtiene el nombre del empleado.
      *
-     * @return the nombre
+     * @return El nombre del empleado.
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * Sets nombre.
+     * Establece el nombre del empleado.
      *
-     * @param nombre the nombre
+     * @param nombre El nombre del empleado.
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * Gets direccion.
+     * Obtiene la dirección del empleado.
      *
-     * @return the direccion
+     * @return La dirección del empleado.
      */
     public String getDireccion() {
         return direccion;
     }
 
     /**
-     * Sets direccion.
+     * Establece la dirección del empleado.
      *
-     * @param direccion the direccion
+     * @param direccion La dirección del empleado.
      */
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
     /**
-     * Gets dni.
+     * Obtiene el número de identificación del empleado (por ejemplo, DNI).
      *
-     * @return the dni
+     * @return El número de identificación del empleado.
      */
     public String getDni() {
         return dni;
     }
 
     /**
-     * Sets dni.
+     * Establece el número de identificación del empleado (por ejemplo, DNI).
      *
-     * @param dni the dni
+     * @param dni El número de identificación del empleado.
      */
     public void setDni(String dni) {
         this.dni = dni;
     }
 
     /**
-     * Gets categoria.
+     * Obtiene la categoría o cargo del empleado en la empresa.
      *
-     * @return the categoria
+     * @return La categoría o cargo del empleado.
      */
     public String getCategoria() {
         return categoria;
     }
 
     /**
-     * Sets categoria.
+     * Establece la categoría o cargo del empleado en la empresa.
      *
-     * @param categoria the categoria
+     * @param categoria La categoría o cargo del empleado.
      */
     public void setCategoria(String categoria) {
         this.categoria = categoria;

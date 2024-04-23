@@ -4,52 +4,52 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * The type Reparacion.
+ * Esta clase representa una reparación realizada a un vehículo. Contiene información sobre las piezas instaladas, el trabajo realizado y la garantía de la reparación.
  */
 public class Reparacion {
 
 
     /**
-     * The Vehiculo.
+     * El vehículo al que se realizó la reparación.
      */
-    Vehiculo vehiculo;
+    private Vehiculo vehiculo;
     /**
-     * The Instalacion de piezas.
+     * La lista de instalaciones de piezas realizadas durante la reparación.
      */
-    List<InstalacionDePieza> instalacionDePiezas;
+    private List<InstalacionDePieza> instalacionDePiezas;
     /**
-     * The Manos de obra.
+     * La lista de trabajos realizados durante la reparación.
      */
-    List<TrabajoRealizado> manosDeObra;
+    private List<TrabajoRealizado> manosDeObra;
     /**
-     * The Descripción.
+     * Descripción detallada de la reparación realizada.
      */
-    String descripción;
+    private String descripción;
     /**
-     * The Fecha.
+     * La fecha en que se realizó la reparación.
      */
-    LocalDateTime fecha;
+    private LocalDateTime fecha;
     /**
-     * The Fecha garantia.
+     * La fecha de vencimiento de la garantía de la reparación.
      */
-    LocalDateTime fechaGarantia;
+    private LocalDateTime fechaGarantia;
 
 
     /**
-     * Instantiates a new Reparacion.
+     * Constructor por defecto de la clase Reparacion.
      */
     public Reparacion() {
     }
 
     /**
-     * Instantiates a new Reparacion.
+     * Constructor de la clase Reparacion.
      *
-     * @param vehiculo            the vehiculo
-     * @param instalacionDePiezas the instalacion de piezas
-     * @param manosDeObra         the manos de obra
-     * @param descripción         the descripción
-     * @param fecha               the fecha
-     * @param fechaGarantia       the fecha garantia
+     * @param vehiculo            El vehículo al que se realizó la reparación.
+     * @param instalacionDePiezas La lista de instalaciones de piezas realizadas durante la reparación.
+     * @param manosDeObra         La lista de trabajos realizados durante la reparación.
+     * @param descripción         Descripción detallada de la reparación realizada.
+     * @param fecha               La fecha en que se realizó la reparación.
+     * @param fechaGarantia       La fecha de vencimiento de la garantía de la reparación.
      */
     public Reparacion(Vehiculo vehiculo, List<InstalacionDePieza> instalacionDePiezas, List<TrabajoRealizado> manosDeObra, String descripción, LocalDateTime fecha, LocalDateTime fechaGarantia) {
         this.vehiculo = vehiculo;
@@ -61,108 +61,108 @@ public class Reparacion {
     }
 
     /**
-     * Gets vehiculo.
+     * Obtiene el vehículo al que se realizó la reparación.
      *
-     * @return the vehiculo
+     * @return El vehículo de la reparación.
      */
     public Vehiculo getVehiculo() {
         return vehiculo;
     }
 
     /**
-     * Sets vehiculo.
+     * Establece el vehículo al que se realizó la reparación.
      *
-     * @param vehiculo the vehiculo
+     * @param vehiculo El vehículo de la reparación.
      */
     public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
     }
 
     /**
-     * Gets instalacion de piezas.
+     * Obtiene la lista de instalaciones de piezas realizadas durante la reparación.
      *
-     * @return the instalacion de piezas
+     * @return La lista de instalaciones de piezas.
      */
     public List<InstalacionDePieza> getInstalacionDePiezas() {
         return instalacionDePiezas;
     }
 
     /**
-     * Sets instalacion de piezas.
+     * Establece la lista de instalaciones de piezas realizadas durante la reparación.
      *
-     * @param instalacionDePiezas the instalacion de piezas
+     * @param instalacionDePiezas La lista de instalaciones de piezas.
      */
     public void setInstalacionDePiezas(List<InstalacionDePieza> instalacionDePiezas) {
         this.instalacionDePiezas = instalacionDePiezas;
     }
 
     /**
-     * Gets manos de obra.
+     * Obtiene la lista de trabajos realizados durante la reparación.
      *
-     * @return the manos de obra
+     * @return La lista de trabajos realizados.
      */
     public List<TrabajoRealizado> getManosDeObra() {
         return manosDeObra;
     }
 
     /**
-     * Sets manos de obra.
+     * Establece la lista de trabajos realizados durante la reparación.
      *
-     * @param manosDeObra the manos de obra
+     * @param manosDeObra La lista de trabajos realizados.
      */
     public void setManosDeObra(List<TrabajoRealizado> manosDeObra) {
         this.manosDeObra = manosDeObra;
     }
 
     /**
-     * Get descripción string.
+     * Obtiene la descripción detallada de la reparación realizada.
      *
-     * @return the string
+     * @return La descripción de la reparación.
      */
     public String getDescripción() {
         return descripción;
     }
 
     /**
-     * Set descripción.
+     * Establece la descripción detallada de la reparación realizada.
      *
-     * @param descripción the descripción
+     * @param descripción La descripción de la reparación.
      */
     public void setDescripción(String descripción) {
         this.descripción = descripción;
     }
 
     /**
-     * Gets fecha.
+     * Obtiene la fecha en que se realizó la reparación.
      *
-     * @return the fecha
+     * @return La fecha de la reparación.
      */
     public LocalDateTime getFecha() {
         return fecha;
     }
 
     /**
-     * Sets fecha.
+     * Establece la fecha en que se realizó la reparación.
      *
-     * @param fecha the fecha
+     * @param fecha La fecha de la reparación.
      */
     public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 
     /**
-     * Gets fecha garantia.
+     * Obtiene la fecha de vencimiento de la garantía de la reparación.
      *
-     * @return the fecha garantia
+     * @return La fecha de vencimiento de la garantía.
      */
     public LocalDateTime getFechaGarantia() {
         return fechaGarantia;
     }
 
     /**
-     * Sets fecha garantia.
+     * Establece la fecha de vencimiento de la garantía de la reparación.
      *
-     * @param fechaGarantia the fecha garantia
+     * @param fechaGarantia La fecha de vencimiento de la garantía.
      */
     public void setFechaGarantia(LocalDateTime fechaGarantia) {
         this.fechaGarantia = fechaGarantia;
