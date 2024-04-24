@@ -1,10 +1,11 @@
 package DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V3;
 
+import Generico.ImpresoraDeDatos;
 import entidades.Vehiculo;
 
 import java.time.LocalDate;
 
-public class EjecutaEjemplo6 {
+public class Ejemplo6 {
 
 
     public static void main(String[] args) {
@@ -27,12 +28,11 @@ public class EjecutaEjemplo6 {
             vehiculoRepository2.save(vehiculo2);
             vehiculoRepository1.save(vehiculo3);
 
-            // Listar los vehículos de cada repositorio
-            System.out.println("Vehículos en el repositorio 1:");
-            vehiculoRepository1.findAll().forEach(System.out::println);
-
-            System.out.println("\nVehículos en el repositorio 2:");
-            vehiculoRepository2.findAll().forEach(System.out::println);
+                           // Listar los vehículos de cada repositorio
+        System.out.println("Vehículos en el repositorio 1:");
+        vehiculoRepository1.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
+        System.out.println("Vehículos en el repositorio 2:");
+        vehiculoRepository2.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
         }
 }
 

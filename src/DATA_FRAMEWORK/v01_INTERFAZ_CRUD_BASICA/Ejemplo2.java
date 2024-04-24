@@ -2,6 +2,7 @@ package DATA_FRAMEWORK.v01_INTERFAZ_CRUD_BASICA;
 
 import DATA_FRAMEWORK.v00_REPOSITORIO_CRUD_BASICO.Ejemplo1;
 import DATA_FRAMEWORK.v00_REPOSITORIO_CRUD_BASICO.VehiculoRepository;
+import Generico.ImpresoraDeDatos;
 import entidades.Vehiculo;
 
 import java.time.LocalDate;
@@ -28,11 +29,10 @@ public class Ejemplo2 {
         vehiculoRepository2.save(vehiculo2);
         vehiculoRepository1.save(vehiculo3);
 
-        // Listar los vehículos de cada repositorio
+                // Listar los vehículos de cada repositorio
         System.out.println("Vehículos en el repositorio 1:");
-        vehiculoRepository1.findAll().forEach(System.out::println);
-
-        System.out.println("\nVehículos en el repositorio 2:");
-        vehiculoRepository2.findAll().forEach(System.out::println);
+        vehiculoRepository1.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
+        System.out.println("Vehículos en el repositorio 2:");
+        vehiculoRepository2.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
     }
 }

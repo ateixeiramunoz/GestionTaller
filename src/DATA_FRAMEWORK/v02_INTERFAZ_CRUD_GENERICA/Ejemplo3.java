@@ -1,12 +1,11 @@
-package DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V6;
+package DATA_FRAMEWORK.v02_INTERFAZ_CRUD_GENERICA;
 
-import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V1.VehiculoRepository;
+import Generico.ImpresoraDeDatos;
 import entidades.Vehiculo;
 
 import java.time.LocalDate;
-import java.util.function.Function;
 
-public class EjecutaEjemplo9 {
+public class Ejemplo3 {
 
 
     public static void main(String[] args) {
@@ -15,12 +14,9 @@ public class EjecutaEjemplo9 {
 
 
     public static void ejecutar() {
-
-
-            Function<Vehiculo, String> idExtractor = Vehiculo::getMatricula;
-
-            VehiculoRepository vehiculoRepository1 = new VehiculoRepository(idExtractor);
-            VehiculoRepository vehiculoRepository2 = new VehiculoRepository(idExtractor);
+            // Crear un repositorio de vehículos
+            VehiculoRepository vehiculoRepository1 = new VehiculoRepository();
+            VehiculoRepository vehiculoRepository2 = new VehiculoRepository();
 
             // Crear nuevos vehículos
             Vehiculo vehiculo1 = new Vehiculo("ABC123", "BASTIDOR1", "Toyota", "Corolla", "Blanco", LocalDate.parse("2013-07-01"), LocalDate.parse("2024-07-01"));
@@ -32,12 +28,12 @@ public class EjecutaEjemplo9 {
             vehiculoRepository2.save(vehiculo2);
             vehiculoRepository1.save(vehiculo3);
 
-            // Listar los vehículos de cada repositorio
-            System.out.println("Vehículos en el repositorio 1:");
-            vehiculoRepository1.findAll().forEach(System.out::println);
-
-            System.out.println("\nVehículos en el repositorio 2:");
-            vehiculoRepository2.findAll().forEach(System.out::println);
+                           // Listar los vehículos de cada repositorio
+        System.out.println("Vehículos en el repositorio 1:");
+        vehiculoRepository1.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
+        System.out.println("Vehículos en el repositorio 2:");
+        vehiculoRepository2.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
         }
+    }
 
-}
+

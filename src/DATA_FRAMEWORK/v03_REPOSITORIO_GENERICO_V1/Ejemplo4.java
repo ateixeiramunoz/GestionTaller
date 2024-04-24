@@ -1,12 +1,11 @@
-package DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V7;
+package DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V1;
 
-import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V1.VehiculoRepository;
+import Generico.ImpresoraDeDatos;
 import entidades.Vehiculo;
 
 import java.time.LocalDate;
 
-public class EjecutaEjemplo10 {
-
+public class Ejemplo4 {
 
     public static void main(String[] args) {
         ejecutar();
@@ -15,8 +14,11 @@ public class EjecutaEjemplo10 {
 
     public static void ejecutar() {
 
-            VehiculoRepository vehiculoRepository1 = new VehiculoRepository(Vehiculo::getMatricula);
-            VehiculoRepository vehiculoRepository2 = new VehiculoRepository(Vehiculo::getMatricula);
+            // Crear un repositorio de vehículos
+            VehiculoIdExtractor vehiculoIdExtractor = new VehiculoIdExtractor();
+            VehiculoRepository vehiculoRepository1 = new VehiculoRepository(vehiculoIdExtractor);
+            VehiculoRepository vehiculoRepository2 = new VehiculoRepository(vehiculoIdExtractor);
+
 
             // Crear nuevos vehículos
             Vehiculo vehiculo1 = new Vehiculo("ABC123", "BASTIDOR1", "Toyota", "Corolla", "Blanco", LocalDate.parse("2013-07-01"), LocalDate.parse("2024-07-01"));
@@ -28,12 +30,12 @@ public class EjecutaEjemplo10 {
             vehiculoRepository2.save(vehiculo2);
             vehiculoRepository1.save(vehiculo3);
 
-            // Listar los vehículos de cada repositorio
-            System.out.println("Vehículos en el repositorio 1:");
-            vehiculoRepository1.findAll().forEach(System.out::println);
+                           // Listar los vehículos de cada repositorio
+        System.out.println("Vehículos en el repositorio 1:");
+        vehiculoRepository1.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
+        System.out.println("Vehículos en el repositorio 2:");
+        vehiculoRepository2.findAll().forEach(ImpresoraDeDatos::ImprimirInfoVehiculo);
 
-            System.out.println("\nVehículos en el repositorio 2:");
-            vehiculoRepository2.findAll().forEach(System.out::println);
         }
+    }
 
-}

@@ -1,10 +1,15 @@
 package Generico;
 
-import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V3.ClienteRepository;
-import entidades.Cliente;
-
-import java.util.ArrayList;
-import java.util.List;
+import DATA_FRAMEWORK.v00_REPOSITORIO_CRUD_BASICO.Ejemplo1;
+import DATA_FRAMEWORK.v01_INTERFAZ_CRUD_BASICA.Ejemplo2;
+import DATA_FRAMEWORK.v02_INTERFAZ_CRUD_GENERICA.Ejemplo3;
+import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V1.Ejemplo4;
+import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V3.Ejemplo6;
+import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V4.Ejemplo7;
+import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V5.Ejemplo8;
+import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V6.Ejemplo9;
+import DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V7.Ejemplo10;
+import DATA_FRAMEWORK.v04_ALMACEN_ESTATICO.EjemploEstatico;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -12,32 +17,28 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Crear una instancia de ClienteRepository
-        ClienteRepository clienteRepository = new ClienteRepository();
-
-        // Crear algunos clientes
-        Cliente cliente1 = new Cliente("001", "Juan", "Calle Principal 123", "12345678A", new ArrayList<>());
-        Cliente cliente2 = new Cliente("002", "María", "Avenida Central 456", "87654321B", new ArrayList<>());
-
-        // Guardar los clientes en el repositorio
-        clienteRepository.save(cliente1);
-        clienteRepository.save(cliente2);
-
-        // Listar todos los clientes
-        List<Cliente> todosLosClientes = clienteRepository.findAll();
-        System.out.println("Todos los clientes:");
-        for (Cliente cliente : todosLosClientes) {
-            System.out.println(cliente.getCodigoCliente() +" "+ cliente.getNombre());
-        }
-
-        // Crear una instancia de ClienteRepository
-        ClienteRepository clienteRepository2 = new ClienteRepository();
-        // Listar todos los clientes
-        List<Cliente> todosLosClientes2 = clienteRepository2.findAll();
-        System.out.println("Todos los clientes:");
-        for (Cliente cliente : todosLosClientes2) {
-            System.out.println(cliente.getCodigoCliente() +" "+ cliente.getNombre());
-        }
+        System.out.println("Ejemplo 1 ================");
+        Ejemplo1.ejecutar();
+        System.out.println("Ejemplo 2 ================");
+        Ejemplo2.ejecutar();
+        System.out.println("Ejemplo 3 ================");
+        Ejemplo3.ejecutar();
+        System.out.println("Ejemplo 4 ================");
+        Ejemplo4.ejecutar();
+        System.out.println("Ejemplo 5 ================");
+        //Ejemplo5.ejecutar();
+        System.out.println("Ejemplo 6 ================");
+        Ejemplo6.ejecutar();
+        System.out.println("Ejemplo 7 ================");
+        Ejemplo7.ejecutar();
+        System.out.println("Ejemplo 8 ================");
+        Ejemplo8.ejecutar();
+        System.out.println("Ejemplo 9 ================");
+        Ejemplo9.ejecutar();
+        System.out.println("Ejemplo 10 ================");
+        Ejemplo10.ejecutar();
+        System.out.println("Ejemplo Estático ================");
+        EjemploEstatico.ejecutar();
 
     }
 
