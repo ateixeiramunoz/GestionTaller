@@ -1,4 +1,4 @@
-package DATA_FRAMEWORK.v03_REPOSITORIO_GENERICO_V4;
+package DATA_FRAMEWORK_OK;
 
 import java.util.List;
 

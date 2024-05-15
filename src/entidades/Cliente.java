@@ -6,7 +6,7 @@ import java.util.List;
 /**
  *  Esta clase representa a un Cliente del taller. Contiene información relacionada con los clientes del taller, quienes traen vehículos para reparar o cambiar piezas.
  */
-public class Cliente {
+public class Cliente extends  Usuario {
 
     /**
      * El código único que identifica al cliente.
@@ -24,6 +24,13 @@ public class Cliente {
      * El número de identificación del cliente (por ejemplo, DNI).
      */
     String dni;
+
+
+    /**
+     * La edad del cliente en años
+     */
+    int edad;
+
     /**
      * La lista de vehículos asociados a este cliente.
      */
@@ -142,4 +149,17 @@ public class Cliente {
     public void setVehiculos(List<Vehiculo> vehiculos) {
         this.vehiculos = vehiculos;
     }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+
+
+
+
 }
