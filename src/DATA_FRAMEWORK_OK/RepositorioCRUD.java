@@ -28,13 +28,16 @@ import java.util.function.Function;
  * @param <T> El tipo de entidad que se almacenará en el repositorio.
  * @param <K> El tipo del identificador único de las entidades almacenadas en el repositorio.
  */
+import java.util.*;
+import java.util.function.Function;
+
 public class RepositorioCRUD<T, K> implements INTERFAZ_RepositorioCRUD<T> {
 
     private Map<K, T> entities;
     private Function<T, K> idExtractor;
 
     /**
-     * Crea una nueva instancia de {@code RepositorioGenerico} con la función de extracción de identificadores especificada.
+     * Crea una nueva instancia de {@code RepositorioCRUD} con la función de extracción de identificadores especificada.
      *
      * @param idExtractor La función que se utilizará para extraer los identificadores únicos de las entidades.
      */
@@ -44,15 +47,15 @@ public class RepositorioCRUD<T, K> implements INTERFAZ_RepositorioCRUD<T> {
     }
 
     @Override
-    public T save(T entity) {
+    public Optional<T> save(T entity) {
         K id = idExtractor.apply(entity);
-        entities.put(id, entity);
-        return entity;
+        T entityGrabada = entities.put(id, entity);
+        return Optional.ofNullable(entityGrabada);
     }
 
     @Override
-    public T findById(String id) {
-        return entities.get(id);
+    public Optional<T> findById(String id) {
+        return Optional.ofNullable(entities.get(id));
     }
 
     @Override
@@ -61,13 +64,13 @@ public class RepositorioCRUD<T, K> implements INTERFAZ_RepositorioCRUD<T> {
     }
 
     @Override
-    public T update(T entity) {
+    public Optional<T> update(T entity) {
         K id = idExtractor.apply(entity);
         if (entities.containsKey(id)) {
-            entities.put(id, entity);
-            return entity;
+            T entidadGrabada = entities.put(id, entity);
+            return Optional.ofNullable(entidadGrabada);
         } else {
-            return null; // Manejo de error si no se encuentra la entidad
+            return Optional.empty();
         }
     }
 

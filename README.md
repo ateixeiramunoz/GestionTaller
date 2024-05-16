@@ -115,6 +115,14 @@ Esta sección describe la precarga de datos del catálogo que se utiliza en el s
 - Registro de Empleado
 
 
+
+
+
+
+
+
+
+
 # EVOLUCIÓN DEL DISEÑO 
 
 
@@ -124,6 +132,11 @@ Por ello se eliminan las entidades asociadas.
  - Se incluyen las entidades de Cita, Instalación de Pieza, Trabajo Realizado y Reparación, todas ellas destinadas 
 a controlar las garantías asociadas a todos los trabajos y/o piezas incluidas en una misma factura.   
 
+
+### 16/05/2024
+
+ - Manejo de excepciones
+ - 
 
 
 
