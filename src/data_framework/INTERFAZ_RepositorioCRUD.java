@@ -1,4 +1,4 @@
-package DATA_FRAMEWORK_OK;
+package data_framework;
 
 import java.util.List;
 import java.util.Optional;

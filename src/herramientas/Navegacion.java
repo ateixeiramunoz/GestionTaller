@@ -1,11 +1,17 @@
-package Herramientas;
+package herramientas;
+
+import Generico.Main;
+import logging.LoggerConfig;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Navegacion {
 
-    public static void mostrarMenuPrincipal() {
+    private static final Logger logger = LoggerConfig.getLogger(Navegacion.class.getSimpleName());
 
+    public static void mostrarMenuPrincipal() {
+        logger.info("Mostrando menu principal");
         System.out.println("Escoge una opcion: ");
         System.out.println("1-. Gestión de Clientes");
         System.out.println("2-. Gestión de vehículos");

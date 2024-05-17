@@ -1,20 +1,32 @@
 package Generico;
 
-import DATA_FRAMEWORK_OK.AlmacenDeDatos;
-import Herramientas.HerramientasCliente;
-import Herramientas.Navegacion;
+import data_framework.AlmacenDeDatos;
+import fileReader.LectorDeArchivos;
+import herramientas.HerramientasCliente;
+import herramientas.Navegacion;
 import entidades.Cliente;
 import entidades.Vehiculo;
+import logging.LoggerConfig;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 public class Main {
 
+    private static final Logger logger = LoggerConfig.getLogger(Main.class.getSimpleName());
 
     public static void main(String[] args) {
 
+        // Ruta al directorio que se quiere procesar
+        String directoryPath = "files";
+
+        // Iniciar el hilo FileReader
+        LectorDeArchivos.iniciarHiloLectorDeArchivos(directoryPath);
+
+
+        logger.info("STARTING APP");
         Cliente cliente1 = new Cliente();
         cliente1.setCodigoCliente("8888x");
         cliente1.setDni("12121211A");
@@ -70,7 +82,7 @@ public class Main {
         {
             System.exit(0);
         }
-
     }
-
 }
+
+

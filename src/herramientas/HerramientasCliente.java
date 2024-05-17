@@ -1,6 +1,6 @@
-package Herramientas;
+package herramientas;
 
-import DATA_FRAMEWORK_OK.AlmacenDeDatos;
+import data_framework.AlmacenDeDatos;
 import entidades.Cliente;
 import entidades.Vehiculo;
 
