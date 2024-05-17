@@ -1,6 +1,7 @@
 package logging;
 
 import appconfig.AppConfig;
+
 import java.io.IOException;
 import java.util.logging.*;
 
@@ -23,7 +24,7 @@ import java.util.logging.*;
  * {@link #getLogger(String)} actúa como una fábrica que proporciona instancias de loggers
  * configurados según el nombre de la clase proporcionado.
  */
-public class LoggerConfig {
+public class MensajesPantallaConfig {
 
     /**
      * Logger para la propia clase LoggerConfig, utilizado para registrar eventos
@@ -67,36 +68,24 @@ public class LoggerConfig {
         if (isConfigured) {
             return;
         }
-        try {
             // Obtener el logger raíz y remover los manejadores predeterminados
             Logger rootLogger = Logger.getLogger("");
-
 
             Handler[] handlers = rootLogger.getHandlers();
             for (Handler handler : handlers) {
                 rootLogger.removeHandler(handler);
             }
 
-            // Configurar el manejador de archivos
-            FileHandler fileHandler = new FileHandler(AppConfig.LOG_FILE_NAME, AppConfig.LOG_FILE_APPEND);
-            fileHandler.setFormatter(new LogFormatter()); // Usar LogFormatter personalizado
-            fileHandler.setLevel(Level.SEVERE);
-
             // Configurar el manejador de consola
             ConsoleHandler consoleHandler = new ConsoleHandler();
-            consoleHandler.setFormatter(new LogFormatter()); // Usar LogFormatter personalizado
+            consoleHandler.setFormatter(new ConsolaFormatter()); // Usar LogFormatter personalizado
             consoleHandler.setLevel(Level.ALL);
 
             // Agregar los manejadores personalizados al logger raíz
-            rootLogger.addHandler(fileHandler);
             rootLogger.addHandler(consoleHandler);
             rootLogger.setLevel(AppConfig.LOG_LEVEL);
 
             // Marcar la configuración como realizada
             isConfigured = true;
-
-        } catch (IOException e) {
-            Logger.getLogger("").log(Level.SEVERE, "Fallo al configurar el logger", e);
-        }
     }
 }

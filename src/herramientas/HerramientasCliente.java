@@ -48,16 +48,62 @@ public class HerramientasCliente {
         return cliente1;
     }
 
+    public Optional<Cliente> modificarCliente() {
 
-    public Cliente modificarCliente() {
-        Cliente cliente1 = new Cliente();
-        System.out.println("MODIFICANDO CLIENTE");
-        return cliente1;
+        Scanner s = new Scanner(System.in);
+        Optional<Cliente> cliente = findCliente();
+
+        if(cliente.isPresent()) {
+
+            System.out.println("Datos del cliente a modificar");
+            System.out.println("Código: " + cliente.get().getDni());
+            System.out.println("Dni: " + cliente.get().getCodigoCliente());
+            System.out.println("Dirección: " + cliente.get().getDireccion());
+            System.out.println("Nombre: " + cliente.get().getNombre());
+            System.out.println("Edad: " + cliente.get().getEdad());
+
+            // Nuevos datos del cliente (modificado)
+            System.out.println("Nuevo Código del cliente: ");
+            String nuevoCodigo = s.nextLine().trim();
+            System.out.println("Nuevo DNI del cliente: ");
+            String nuevoDni = s.nextLine().trim();
+            System.out.println("Nueva Dirección del cliente: ");
+            String nuevaDireccion = s.nextLine().trim();
+            System.out.println("Nuevo Nombre del cliente: ");
+            String nuevoNombre = s.nextLine().trim();
+            System.out.println("Nueva Edad del cliente (ejemplo: 18): ");
+            int nuevaEdad = s.nextInt();
+
+            // Actualización de los campos del cliente
+            if (!nuevoCodigo.isEmpty()) {
+                cliente.get().setCodigoCliente(nuevoCodigo);
+            }
+            if (!nuevoDni.isEmpty()) {
+                cliente.get().setDni(nuevoDni);
+            }
+            if (!nuevaDireccion.isEmpty()) {
+                cliente.get().setDireccion(nuevaDireccion);
+            }
+            if (!nuevoNombre.isEmpty()) {
+                cliente.get().setNombre(nuevoNombre);
+            }
+            if(nuevaEdad > 0 && nuevaEdad <= 100) {
+                cliente.get().setEdad(nuevaEdad);
+            }
+            return cliente;
+        } else {
+            return Optional.empty();
+        }
     }
 
     public void eliminarCliente() {
-        Cliente cliente1 = new Cliente();
-        System.out.println("ELIMINANDO CLIENTE");
+        Optional<Cliente> cliente = findCliente();
+        if(cliente.isPresent()) {
+            AlmacenDeDatos.getClienteRepository().delete(cliente.get());
+            System.out.println("Cliente " + cliente.get().getCodigoCliente() + " ha sido eliminado");
+        } else {
+            System.out.println("Cliente no encontrado");
+        }
     }
 
     public void muestraInfoCliente() {
@@ -79,6 +125,20 @@ public class HerramientasCliente {
     public void listarClientes() {
         List<Cliente> listaClientes = AlmacenDeDatos.getClienteRepository().findAll();
         System.out.println(listaClientes);
+    }
+
+    public Optional<Cliente> findCliente() {
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Busca el cliente por su id: ");
+        String id = s.next();
+        Optional<Cliente> cliente = AlmacenDeDatos.getClienteRepository().findById(id);
+        if(cliente.isPresent()) {
+            return cliente;
+        } else {
+            System.out.println("Cliente no encontrado");
+            return Optional.empty();
+        }
     }
 
 

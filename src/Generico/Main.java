@@ -10,6 +10,7 @@ import logging.LoggerConfig;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 
@@ -27,6 +28,9 @@ public class Main {
 
 
         logger.info("STARTING APP");
+
+
+
         Cliente cliente1 = new Cliente();
         cliente1.setCodigoCliente("8888x");
         cliente1.setDni("12121211A");
@@ -58,8 +62,18 @@ public class Main {
                     case "1":
                         herramientasCliente.registroCliente();
                         break;
-                    case  "2":
-                        herramientasCliente.modificarCliente();
+                    case "2":
+                        Optional<Cliente> clienteDevuelto = herramientasCliente.modificarCliente();
+                        if (clienteDevuelto.isPresent()) {
+                            System.out.println("Cliente modificado:");
+                            System.out.println("Código: " + clienteDevuelto.get().getCodigoCliente());
+                            System.out.println("DNI: " + clienteDevuelto.get().getDni());
+                            System.out.println("Dirección: " + clienteDevuelto.get().getDireccion());
+                            System.out.println("Nombre: " + clienteDevuelto.get().getNombre());
+                            System.out.println("Edad: " + clienteDevuelto.get().getEdad());
+                        } else {
+                            System.out.println("El cliente con el id introducido no existe");
+                        }
                         break;
                     case  "3":
                         herramientasCliente.eliminarCliente();

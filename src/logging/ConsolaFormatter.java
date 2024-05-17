@@ -12,7 +12,7 @@ import java.util.logging.LogRecord;
  * organiza los mensajes de log en un formato legible que incluye la fecha, hora, nivel de log,
  * nombre del logger y el mensaje del log.
  */
-public class LogFormatter extends Formatter {
+public class ConsolaFormatter extends Formatter {
 
     /**
      * Formatea un registro de log en una cadena de texto utilizando un formato específico.
@@ -32,10 +32,7 @@ public class LogFormatter extends Formatter {
      */
     @Override
     public String format(LogRecord record) {
-        return String.format("%1$tF %1$tT %2$s %3$s - %4$s%n",
-                record.getMillis(),
-                record.getLevel().getName(),
-                record.getLoggerName(),
+        return String.format("%1$s%n",
                 formatMessage(record));
     }
 }
