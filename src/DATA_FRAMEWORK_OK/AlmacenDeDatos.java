@@ -1,5 +1,6 @@
-package DATA_FRAMEWORK.v04_ALMACEN_ESTATICO;
+package DATA_FRAMEWORK_OK;
 
+import entidades.Cliente;
 import entidades.Vehiculo;
 
 /***
@@ -32,6 +33,11 @@ public class AlmacenDeDatos {
             new RepositorioCRUD<>(Vehiculo::getMatricula);
 
 
+
+    private static final RepositorioCRUD<Cliente, String> clienteRepository  = new RepositorioCRUD<>(Cliente::getCodigoCliente);
+
+
+
     /**
      * Devuelve el repositorio de vehículos que utiliza la implementación RepositorioCRUDGenericoEvolucion.
      * @return Instancia de RepositorioCRUDGenericoEvolucion.
@@ -39,5 +45,12 @@ public class AlmacenDeDatos {
     public static RepositorioCRUD<Vehiculo, String> getVehiculoRepository() {
         return vehiculoRepository;
     }
+
+
+
+    public static RepositorioCRUD<Cliente, String> getClienteRepository() {
+        return clienteRepository;
+    }
+
 
 }

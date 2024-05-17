@@ -189,4 +189,15 @@ public class Vehiculo {
     public void setFechaITV(LocalDate fechaITV) {
         this.fechaITV = fechaITV;
     }
+
+    @Override
+    public String toString()
+    {
+        String salida = "";
+        salida = salida + " " + "Matricula: " + this.getMatricula();
+        salida = salida + " " + "Marca: " + this.getMarca();
+        return  salida;
+
+    }
+
 }

@@ -2,6 +2,7 @@ package entidades;
 
 // Clase base Usuario
 public class Usuario {
+
     private String nombreUsuario;
     private String contraseña;
     private String correoElectronico;
@@ -43,6 +44,8 @@ public class Usuario {
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
+
+
 }
 
 
