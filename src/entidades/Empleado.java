@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Esta clase representa a un Empleado. Contiene información relacionada con los empleados de la empresa.
  */
-public class Empleado {
+public class Empleado extends Usuario {
 
     /**
      * El código único que identifica al empleado.
@@ -33,6 +33,7 @@ public class Empleado {
      * Constructor por defecto de la clase Empleado.
      */
     public Empleado() {
+
     }
 
     /**

@@ -125,3 +125,6 @@ Por ello se eliminan las entidades asociadas.
 a controlar las garantías asociadas a todos los trabajos y/o piezas incluidas en una misma factura.   
 
 
+
+
+
