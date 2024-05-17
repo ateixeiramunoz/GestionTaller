@@ -71,7 +71,6 @@ public class LoggerConfig {
             // Obtener el logger raíz y remover los manejadores predeterminados
             Logger rootLogger = Logger.getLogger("");
 
-
             Handler[] handlers = rootLogger.getHandlers();
             for (Handler handler : handlers) {
                 rootLogger.removeHandler(handler);
@@ -80,12 +79,12 @@ public class LoggerConfig {
             // Configurar el manejador de archivos
             FileHandler fileHandler = new FileHandler(AppConfig.LOG_FILE_NAME, AppConfig.LOG_FILE_APPEND);
             fileHandler.setFormatter(new LogFormatter()); // Usar LogFormatter personalizado
-            fileHandler.setLevel(Level.SEVERE);
+            fileHandler.setLevel(Level.ALL);
 
             // Configurar el manejador de consola
             ConsoleHandler consoleHandler = new ConsoleHandler();
             consoleHandler.setFormatter(new LogFormatter()); // Usar LogFormatter personalizado
-            consoleHandler.setLevel(Level.ALL);
+            consoleHandler.setLevel(Level.WARNING);
 
             // Agregar los manejadores personalizados al logger raíz
             rootLogger.addHandler(fileHandler);

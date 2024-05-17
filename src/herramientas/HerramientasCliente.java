@@ -6,6 +6,7 @@ import entidades.Vehiculo;
 
 import java.util.*;
 
+@SuppressWarnings("UseOfSystemOutOrSystemErr")
 public class HerramientasCliente {
 
     public Cliente registroCliente()

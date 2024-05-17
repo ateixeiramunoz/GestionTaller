@@ -1,7 +1,6 @@
 package herramientas;
 
 import logging.LoggerConfig;
-import logging.MensajesPantallaConfig;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -9,26 +8,25 @@ import java.util.logging.Logger;
 
 public class Navegacion {
 
+
+
     private static final Logger logger =
             LoggerConfig.getLogger(Navegacion.class.getName());
 
-    private static final Logger escritorPantalla =
-            MensajesPantallaConfig.getLogger(Navegacion.class.getName());
-
-
     public static void mostrarMenuPrincipal() {
 
-        logger.info("Mostrando menu principal");
+        logger.fine("Mostrando menu principal");
 
-        escritorPantalla.info("Escoge una opcion: ");
-        escritorPantalla.info("1-. Gestión de Clientes");
-        escritorPantalla.info("2-. Gestión de vehículos");
-        escritorPantalla.info("x-. Salir");
-
+        System.out.println("Escoge una opcion: ");
+        System.out.println("1-. Gestión de Clientes");
+        System.out.println("2-. Gestión de vehículos");
+        System.out.println("x-. Salir");
 
     }
 
     public static void mostrarMenuCliente() {
+
+        logger.fine("Mostrando menu cliente");
 
         System.out.println("Escoge una opcion: ");
         System.out.println("1-. Alta de Cliente");
@@ -40,6 +38,8 @@ public class Navegacion {
 
     public static void mostrarMenuVehiculo() {
 
+        logger.fine("Mostrando menu vehiculo");
+
         System.out.println("Escoge una opcion: ");
         System.out.println("1-. Alta de Vehiculo");
         System.out.println("2-. Modificacion de Vehiculo");
@@ -49,6 +49,7 @@ public class Navegacion {
     }
 
     public static String leerRespuesta() {
+        logger.fine("leyendo respuesta");
         Scanner s = new Scanner(System.in);
         String respuesta = s.next();
         return respuesta;
