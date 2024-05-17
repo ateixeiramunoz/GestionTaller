@@ -1,5 +1,8 @@
-package DATA_FRAMEWORK_OK;
+package data_framework;
 
+
+import Generico.Main;
+import logging.LoggerConfig;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,12 +32,15 @@ import java.util.function.Function;
  * @param <K> El tipo del identificador único de las entidades almacenadas en el repositorio.
  */
 import java.util.*;
-import java.util.function.Function;
+import java.util.logging.Logger;
 
 public class RepositorioCRUD<T, K> implements INTERFAZ_RepositorioCRUD<T> {
 
+    private static final Logger logger = LoggerConfig.getLogger(RepositorioCRUD.class.getSimpleName());
+
     private Map<K, T> entities;
     private Function<T, K> idExtractor;
+
 
     /**
      * Crea una nueva instancia de {@code RepositorioCRUD} con la función de extracción de identificadores especificada.
@@ -49,8 +55,8 @@ public class RepositorioCRUD<T, K> implements INTERFAZ_RepositorioCRUD<T> {
     @Override
     public Optional<T> save(T entity) {
         K id = idExtractor.apply(entity);
-        T entityGrabada = entities.put(id, entity);
-        return Optional.ofNullable(entityGrabada);
+        entities.put(id, entity);
+        return Optional.ofNullable(entity);
     }
 
     @Override

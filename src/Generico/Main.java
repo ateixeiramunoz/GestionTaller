@@ -1,19 +1,35 @@
 package Generico;
 
-import DATA_FRAMEWORK_OK.AlmacenDeDatos;
-import Herramientas.HerramientasCliente;
-import Herramientas.Navegacion;
+import data_framework.AlmacenDeDatos;
+import fileReader.LectorDeArchivos;
+import herramientas.HerramientasCliente;
+import herramientas.Navegacion;
 import entidades.Cliente;
 import entidades.Vehiculo;
+import logging.LoggerConfig;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
 
 
 public class Main {
 
+    private static final Logger logger = LoggerConfig.getLogger(Main.class.getSimpleName());
 
     public static void main(String[] args) {
+
+        // Ruta al directorio que se quiere procesar
+        String directoryPath = "files";
+
+        // Iniciar el hilo FileReader
+        LectorDeArchivos.iniciarHiloLectorDeArchivos(directoryPath);
+
+
+        logger.info("STARTING APP");
+
+
 
         Cliente cliente1 = new Cliente();
         cliente1.setCodigoCliente("8888x");
@@ -46,8 +62,18 @@ public class Main {
                     case "1":
                         herramientasCliente.registroCliente();
                         break;
-                    case  "2":
-                        herramientasCliente.modificarCliente();
+                    case "2":
+                        Optional<Cliente> clienteDevuelto = herramientasCliente.modificarCliente();
+                        if (clienteDevuelto.isPresent()) {
+                            System.out.println("Cliente modificado:");
+                            System.out.println("Código: " + clienteDevuelto.get().getCodigoCliente());
+                            System.out.println("DNI: " + clienteDevuelto.get().getDni());
+                            System.out.println("Dirección: " + clienteDevuelto.get().getDireccion());
+                            System.out.println("Nombre: " + clienteDevuelto.get().getNombre());
+                            System.out.println("Edad: " + clienteDevuelto.get().getEdad());
+                        } else {
+                            System.out.println("El cliente con el id introducido no existe");
+                        }
                         break;
                     case  "3":
                         herramientasCliente.eliminarCliente();
@@ -70,7 +96,7 @@ public class Main {
         {
             System.exit(0);
         }
-
     }
-
 }
+
+
